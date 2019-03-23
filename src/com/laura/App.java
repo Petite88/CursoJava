@@ -7,27 +7,27 @@ public class App {
 
 	public static void main(String[] args) {
 
-
+        int n, a;
 		String intergerPattern = "\\d+";
 
 		Random x = new Random();
-		int n;
+		
 		n = x.nextInt(9) + 1;
-		System.out.println("n" + n);
+		System.out.println("n " + n);
 		boolean acertado = false;
 		Scanner numCliente = new Scanner(System.in);
 		do {
-			System.out.println("Introduce un número");
+			System.out.println("Introduce un nï¿½mero");
 			boolean formatCorrect = true;
 			String tempNumber = numCliente.next();
 			if (tempNumber == null || !tempNumber.trim().matches(intergerPattern)) {
-				System.out.println("Número con formato incorrecto");
+				System.out.println("Nï¿½mero con formato incorrecto");
 				formatCorrect = false;
 			}
 			if (formatCorrect) {
-				int a = Integer.valueOf(tempNumber);
+				a = Integer.valueOf(tempNumber);
 				if (a == n) {
-					System.out.println("Has acertado el número");
+					System.out.println("Has acertado el nï¿½mero");
 					acertado = true;
 				} else {
 					if (a > n) {
